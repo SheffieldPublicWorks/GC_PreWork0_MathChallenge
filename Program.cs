@@ -17,7 +17,7 @@ namespace GC_Deliverable0_PreWorkMathChallenge
             long num1 = 0, num2 = 0;
 
             Console.WriteLine("Welcome! You will be asked to enter two integers.");
-            Console.WriteLine("Integers MUST be the same length, e.g., 123 and 231, not 1 and 34\r\n");
+            Console.WriteLine("Integers MUST be the same length, e.g., 123 and 231, not 1 and 34. No zeroes.\r\n");
 
             ReadInts(ref num1, ref num2);                                                                                           //ReadInts() will read in user input, check it's integrity, and perform the digit summation test.
 
@@ -34,6 +34,12 @@ namespace GC_Deliverable0_PreWorkMathChallenge
             {
                 Console.WriteLine("Enter the second number (no decimals):");
                 b = CheckIntFormats(Console.ReadLine());
+
+                if (b == 0)
+                {
+                    Console.WriteLine("The program finished with errors.");
+                    return;
+                }
             }
             else
             {
